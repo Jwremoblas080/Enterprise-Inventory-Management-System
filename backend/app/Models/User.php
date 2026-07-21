@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use illuminate\Database\Eloquent\SoftDeletes;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -23,7 +24,7 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-
+    use SoftDeletes;
     /**
      * The attributes that should be hidden for serialization.
      *

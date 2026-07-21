@@ -1,21 +1,19 @@
 <?php
 
 namespace App\Models;
-use illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Permission extends Model
 {
     protected $fillable = [
         'name',
         'description',
     ];
     protected $casts = [
-        'name' => 'string',
-        'description' => 'string',
+        'name'=> 'string0',
+        'description'=> 'string',
         'created_at' => 'datetime:Y-m-d H:i:s',
         'updated_at' => 'datetime:Y-m-d H:i:s',
     ];
-    use SoftDeletes;
 }
